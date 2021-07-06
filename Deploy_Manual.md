@@ -1,9 +1,9 @@
-## 14. heroku への deploy
+# heroku への Deploy
 - **GitHub**
   - source code GitHub で管理
 - **heroku**
   - web App の運用・構築・公開をする Pass(platform as a service)
-### 0. deploy の手順(準備編)
+##  deploy の手順(準備編)
 1. 必要なライブラリーの install
    - gunicorn : (web server gateway interface)
      - web server と web app をつなげる役割をする
@@ -33,7 +33,7 @@
 9. .gitignore の作成
    - git 上で version 管理の対象としないものを記述する
 10. local 環境の source code に対して git 導入する
-### 1. venv (仮想環境)にライブラリ install
+## 1. venv (仮想環境)にライブラリ install
     # gunicorn install
     pip install gunicorn
 
@@ -81,7 +81,7 @@
 ### 9. .gitignore の作成
 - 今回はリソース cp & ps
 - git 導入
-## 15. deploy 手順 (heroku編)
+## 2. deploy 手順 (heroku編)
 1. heroku CLI の install (heroku site から)
 2. heroku で設定した app とローカルの source を紐付け
 3. heroku に push
@@ -167,4 +167,4 @@
 - heroku site の setting page へ
   - Domains Your app can be found at URL をクリック
   - site が表示されたら OK!
-## 16.
+## 3.
