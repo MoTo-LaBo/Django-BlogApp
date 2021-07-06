@@ -195,4 +195,22 @@
 - heroku site の setting page へ
   - Domains Your app can be found at URL をクリック
   - site が表示されたら OK!
-## 3.
+## 3. AWS 3 に画像を保存する
+### 1. settings.py file 記述後 コマンド実行
+    pip install django-storages
+- django-storages-1.11.1 を requirements.txt に記述
+### 2. 下記コマンド実行
+    pip install boto3
+- boto3-1.17.105
+- botocore-1.20.105
+- jmespath-0.10.0
+- python-dateutil-2.8.1
+- s3transfer-0.4.2
+- six-1.16.0
+- urllib3-1.26.6
+- 上記も requirements.txt に追記する
+### 3. settings.py に追記
+    INSTALLED_APPS = [
+    ...........
+    'storages',
+]
