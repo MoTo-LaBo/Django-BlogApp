@@ -148,6 +148,7 @@
     * [new branch]      main -> main
 - git push heroku main 完了！！！
 ## pip command 一覧
+> https://prograshi.com/language/python/python-pip/
 - git push heroku main で error が出て requirements.txt を修正する時に pip の version 確認や相互性確認など必要になってくる為
 #### パッケージのインストール
     pip install パッケージ名
