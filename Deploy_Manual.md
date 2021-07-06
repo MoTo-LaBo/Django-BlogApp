@@ -1,4 +1,4 @@
-# heroku への Deploy
+# Heroku への Deploy
 - **GitHub**
   - source code GitHub で管理
 - **heroku**
