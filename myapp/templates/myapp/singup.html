@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-3">
+        <br>
+        <h2>Singup</h2>
+        <br>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            {{field.label }}
+            {{ field }}
+            {{ field.errors }}
+            <br>
+            {% endfor %}
+            <br>
+            <button type="submit" class="btn btn-primary" style="background-color: #4f4f4f;" data-mdb-ripple-color="white">Singup</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

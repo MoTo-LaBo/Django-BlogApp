@@ -1,0 +1,43 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<!-- Background image -->
+<main class="container">
+    <div class="p-5 text-center bg-image mb-3 " style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg'); height: 350px;">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="text-white">
+                    <h1 class="mb-3">{{ request.site.siteconfig.meta_title }}</h1>
+                    <h4 class="mb-3">{{ request.site.siteconfig.top_title }}</h4>
+                    <h6 class="mb-3">{{ request.site.siteconfig.top_subtitle }}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Background image -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for item in post_list %}
+        <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                {% if item.thumbnail %}
+                <img src="{{ item.thumbnail.url }}" class="img-fluid" alt="{{ item.title }}" />
+                {% else %}
+                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" alt="{{ item.title }}" />
+                {% endif %}
+                <a href="{% url 'myapp:post_detail' item.id %}">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ item.title }}<smal class="ms-3 fs-6 fw-light">{{ item.author }}</small></h5>
+                <p>{{ item.category }}</p>
+                <p class="card-text">
+                    {{ item.content | safe | truncatechars_html:30 }}
+                </p>
+                <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-light" data-mdb-ripple-color="dark">もっと読む…</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{{ request.site.siteconfig.meta_title }}</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Start your project here-->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">MoTo LaBo</a>
+                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin" target="_blank">管理画面へ</a>
+                        </li>
+                        <!-- Navbar dropdown Account -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="account" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Account</a>
+                            <!-- Dropdown menu -->
+                            <ul class="dropdown-menu" aria-labelledby="account">
+                                {% if request.user.is_authenticated %}
+                                <li><a class="dropdown-item" href="">{{ request.user }}</a> </li>
+                                <li><a class="dropdown-item" href="{% url 'myapp:logout' %}">ログアウト</a></li>
+                                {% else %}
+                                <li><a class="dropdown-item" href="{% url 'myapp:login' %}">ログイン</a></li>
+                                <li><a class="dropdown-item" href="{% url 'myapp:singup' %}">ユーザー登録</a></li>
+                                {% endif %}
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Navbar dropdown Post -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Post</a>
+                            <!-- Dropdown menu -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'myapp:post_create' %}">新規投稿</a></li>
+                                <li><a class="dropdown-item" href="{% url 'myapp:post_list' %}">投稿一覧</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Navbar dropdown Category List -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Category</a>
+                            <!-- Dropdown menu -->
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% for item in category_list %}
+                                <li><a class="dropdown-item" href="{% url 'myapp:category_detail' item.name_en %}">{{ item.name }}</a></li>
+                                {% endfor %}
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                <li><a class="dropdown-item" href="{% url 'myapp:category_list' %}">カテゴリ一覧</a></li>
+                        </li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <form action="{% url 'myapp:search' %}" class="d-flex input-group w-auto" method="POST">
+                        {% csrf_token %}
+                        <div class="form-outline">
+                            <input type="search" id="form1" class="form-dark form-control" aria-label="Search" name="freeword" />
+                            <label class="form-label" for="form1">Search</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: #4f4f4f;" data-mdb-ripple-color="white">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar -->
+
+    <!-- Background image -->
+    <main class="container">
+        {% if messages %}
+        {% for message in messages %}
+        <!-- Note: class .show is used for demo purposes. Remove it when using it in the real project. -->
+        <div class="alert alert-{{ message.tags }} alert-primary d-flex flex-row mb-1" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close ms-2 white ms-auto" data-mdb-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <!-- End your project here-->
+    <footer class="text-center text-white" style="background-color:#ffffff;">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <!-- Github -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+        <!-- Copyright -->
+        <div class="p-3" style="background-color:#ffffff;">
+            <a class="btn-link text-dark" role="button" data-mdb-ripple-color="light" href="https://mdbootstrap.com/">© 2021 MoTo LaBo</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+</body>
+
+</html>

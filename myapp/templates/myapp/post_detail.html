@@ -1,0 +1,48 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-9">
+        <br>
+        <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                {% if object.thumbnail %}
+                <img src="{{ object.thumbnail.url }}" class="img-fluid" alt="{{ object.title }}" />
+                {% else %}
+                <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" alt="{{ object.title }}" />
+                {% endif %}
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ object.title }}</h5>
+                <p class="card-text">{{ object.content | safe | linebreaksbr | urlize }}</p>
+                <a href="{% url 'myapp:like_add' object.pk %}" class="btn btn-light" data-mdb-ripple-color="dark">お気に入り</a>
+                <hr>
+                <a href="javascript:void(0);" onclick="window.history.back();" class="btn btn-light" data-mdb-ripple-color="dark">戻る</a>
+                {% if object.author == request.user %}
+                <a href="{% url 'myapp:post_update' object.pk %}" class="btn btn-primary" style="background-color: #4f4f4f;" data-mdb-ripple-color="white">更新</a>
+                <a href="{% url 'myapp:post_delete' object.pk %}" class="btn btn-primary" style="background-color: #33333374;" data-mdb-ripple-color="white">削除</a>
+                {%  endif %}
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="col-md-3">
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ object.category }}</h5>
+                <p>このカテゴリの他の記事</p>
+            </div>
+            <ul class="list-group">
+                {% for item in category_posts %}
+                <li class="list-group-item btn btn-light mb-1" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' item.id %}" class="text-dark">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
