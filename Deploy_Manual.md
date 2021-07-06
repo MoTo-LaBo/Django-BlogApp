@@ -56,7 +56,7 @@
     Python 3.9.5
 - python の version を runtime.txt に記述する
   - python - 3.9.5
-- - project folder 直下に作成する
+  - project folder 直下に作成する
 ### 4. Procfile の作成
     web: gunicorn myproject.wsgi
 - project folder 直下に作成する
