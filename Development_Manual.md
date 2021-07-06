@@ -685,3 +685,54 @@ sqlite3 操作上のエラー：テーブル「myapp_post」がすでに存在�
 - BAIS_DIRE の階層に static folder 作成。その中に style.css file 作成。中身は空でOK
 ### 9. .gitignore の作成
 - 今回はリソース cp & ps
+- git 導入
+## 15. deploy 手順 (heroku編)
+1. heroku CLI の install (heroku site から)
+2. heroku で設定した app とローカルの source を紐付け
+3. heroku に push
+4. heroku で Dyno を起動
+5. heroku で migrate
+6. heroku で superuser 作成
+7. heroku を開く
+- 上記の作業は仮想環境内で行う
+### 1. heroku CLI の install (heroku site から)
+    brew tap heroku/brew && brew install heroku
+### 2. heroku で設定した app とローカルの source を紐付け\
+    heroku login
+
+    heroku git:remote -a django-blog-app-moto-labo
+
+    git remote
+- heroku , origin が出ていれば完了
+### 3. この時点で heroku の setting へ
+- Config Vars : key , value を入力
+  - local_settings.py で記述した SECRET_KEY =  ' '(シングルコーテーション)の中身を入力
+### 4. git に push
+    git push heroku main
+## python version 問題...
+- heroku が python 3.9.5 をサポートしていない…
+- venv の python version 変更
+### 1.  brew upgrate
+    brew upgrate
+### 2.  pyenv version 確認
+    pyenv versions
+
+    # install できる version 一覧表示
+    pyenv install --list
+### 3. pyenv install
+    pyenv install 3.9.6
+
+    # version 切り替え・登録
+    pyenv global 3.9.6
+
+    # python --version 確認
+    python --version
+### 4.  仮想環境のバージョンを切り替え
+    # 仮想環境からでる
+    deactivate
+### 5.  --clera potion 使用
+    python3 -m venv --clear venv
+### 6. 仮想環境に入る
+    source venv/bin/activate
+- version 3.9.6 に変更になっている
+- v3.9.6 (venv)
