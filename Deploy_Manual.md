@@ -147,6 +147,33 @@
     To https://git.heroku.com/django-blog-app-moto-labo.git
     * [new branch]      main -> main
 - git push heroku main 完了！！！
+## pip command 一覧
+- git push heroku main で error が出て requirements.txt を修正する時に pip の version 確認や相互性確認など必要になってくる為
+#### パッケージのインストール
+    pip install パッケージ名
+#### アップグレード
+    pip install -U パッケージ名
+#### アップグレード
+    pip install –update パッケージ名
+#### インストール（バージョン指定）
+    pip install パッケージ名==バージョン
+#### インストール済みパッケージ名とバージョン一覧
+    pip list
+#### インストール済みパッケージ名とバージョン一覧
+    pip freeze
+#### 最新版になっていないもののみ表示
+    pip list –outdate
+#### pipのバージョン情報を表示
+    pip -V
+#### バージョン情報などを表示
+    pip show パッケージ名
+#### 最新ファイルをDL(インストールはしない)
+    pip download パッケージ名
+#### pipの主要コマンドとオプション一覧を表示
+    pip help
+#### コマンドの内容とオプションを表示
+    pip コマンド -h
+
 ### 5. heroku で Dyno を起動
     heroku ps:scale web=1
 - Scaling dynos... done, now running web at 1:Free
