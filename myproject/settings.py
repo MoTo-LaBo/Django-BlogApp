@@ -118,6 +118,13 @@ LOGIN_URL = 'myapp:login'
 
 LOGIN_REDIRECT_URL = 'myapp:index'
 
+# S3 MEDIA_URL を有効にする為
+AWS_STORAGE_BUCKT_NAME = 'django-blog-app-moto-labo'  # s3 のバケット名
+AWS_S3_CUSTOM_DOMAIN = '%.s3.amazonaws.com' % AWS_STORAGE_BUCKT_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',  # 1日はそのキャッシュを使用する
+}
+
 # S3 の為の記述
 AWS_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
