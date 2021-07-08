@@ -19,13 +19,19 @@
                 <h5 class="card-title">{{ object.title }}</h5>
                 <p class="card-text">{{ object.content | safe | linebreaksbr | urlize }}</p>
                 <a href="{% url 'myapp:like_add' object.pk %}" class="btn btn-light" data-mdb-ripple-color="dark">お気に入り</a>
+                <small>&nbsp;{% if object.like_count %}{{ object.like_count }}人がお気に入りに入れています{% endif %}</small>
                 <hr>
                 <a href="javascript:void(0);" onclick="window.history.back();" class="btn btn-light" data-mdb-ripple-color="dark">戻る</a>
                 {% if object.author == request.user %}
                 <a href="{% url 'myapp:post_update' object.pk %}" class="btn btn-primary" style="background-color: #4f4f4f;" data-mdb-ripple-color="white">更新</a>
                 <a href="{% url 'myapp:post_delete' object.pk %}" class="btn btn-primary" style="background-color: #33333374;" data-mdb-ripple-color="white">削除</a>
                 {%  endif %}
+                <hr>
+                <div class="text-center mt-1">
+                    <small class="text-muted ms-3 fs-6 fw-light">by&nbsp;{{ object.author }}&nbsp;at {{ object.created_at.date }}</small>
+                </div>
             </div>
+
         </div>
         <br>
     </div>

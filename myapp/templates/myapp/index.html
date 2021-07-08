@@ -2,7 +2,7 @@
 
 {% block content %}
 <!-- Background image -->
-<main class="container">
+<main class="container mt-5">
     <div class="p-5 text-center bg-image mb-3 hover-overlay" data-mdb-ripple-color="dark" style="background-image: url('https://django-blog-app-moto-labo.s3.amazonaws.com/media/images/freeze.jpg'); height: 25vmax;">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.100);">
             <div class="d-flex justify-content-center align-items-center h-100">
@@ -15,10 +15,10 @@
         </div>
     </div>
     <!-- Background image -->
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
         {% for item in post_list %}
-        <div class="card">
-            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <div class="col mt-5">
+            <div class="card bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 {% if item.thumbnail %}
                 <img src="{{ item.thumbnail.url }}" class="img-fluid" alt="{{ item.title }}" />
                 {% else %}
@@ -29,15 +29,22 @@
                 </a>
             </div>
             <div class="card-body">
-                <h5 class="card-title">{{ item.title }}<smal class="ms-3 fs-6 fw-light">{{ item.author }}</small></h5>
+                <h5 class="card-title">{{ item.title }}</h5>
                 <p>{{ item.category }}</p>
                 <p class="card-text">
                     {{ item.content | safe | truncatechars_html:30 }}
                 </p>
-                <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-light" data-mdb-ripple-color="dark">もっと読む…</a>
+                <div class="d-flex">
+                    <i class="far fa-thumbs-up mt-2">&nbsp;{{ item.like_count }}</i>
+                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-light ms-auto" data-mdb-ripple-color="dark">もっと読む…</a>
+                </div>
+            </div>
+            <div class="card-footer text-center mt-1">
+                <small class="text-muted ms-3 fs-6 fw-light">by&nbsp;{{ item.author }}&nbsp;at {{ item.created_at.date }}</small>
             </div>
         </div>
         {% endfor %}
     </div>
+    <a href="{% url 'myapp:post_list' %}" class="btn btn-primary mt-3" style="background-color: #33333374;" data-mdb-ripple-color="white">全ての記事を見る</a>
 </main>
 {% endblock %}
