@@ -32,7 +32,7 @@
                 <h5 class="card-title">{{ item.title }}</h5>
                 <p>{{ item.category }}</p>
                 <p class="card-text">
-                    {{ item.content | safe | truncatechars_html:30 }}
+                    {{ item.content | safe | truncatechars_html:50 }}
                 </p>
                 <div class="d-flex">
                     <i class="far fa-thumbs-up mt-2">&nbsp;{{ item.like_count }}</i>
