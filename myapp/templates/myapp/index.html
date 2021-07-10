@@ -4,7 +4,7 @@
 <div class="text-center position-relative">
     <video class="video-fluid z-depth-1 " autoplay loop muted width="100%" height="auto">
         <source src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/video/Beach+-+50642.mp4" type="video/mp4" />
-        <source src="video/movie.ogv" type="video/ogv">
+        <source src="" type="video/ogv">
         <source src="" type="video/webm">
     </video>
     <div class="align-items-center position-absolute top-50 start-50 translate-middle">
@@ -18,9 +18,9 @@
 <!--/video-area-->
 {% endblock %}
 {% block content %}
-<main class="container mt-5">
+<main class="container mt-3">
     <!-- Background image -->
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for item in post_list %}
         <div class="col mt-5">
             <div class="card bg-image hover-overlay ripple" data-mdb-ripple-color="light">
