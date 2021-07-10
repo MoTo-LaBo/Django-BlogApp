@@ -30,13 +30,14 @@
             </div>
             <div class="card-body">
                 <h4 class="card-title fw-light">{{ item.title }}</h4>
-                <p>{{ item.category }}</p>
+                <hr>
                 <p class="card-text">
                     {{ item.content | safe | truncatechars_html:130 }}
                 </p>
-                <div class="d-flex">
+                <div class="d-flex justify-content-between">
                     <i class="far fa-thumbs-up mt-2">&nbsp;{{ item.like_count }}</i>
-                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-light ms-auto" data-mdb-ripple-color="dark">もっと読む…</a>
+                    <p class="mb-0 mt-2">{{ item.category }}</p>
+                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-light" data-mdb-ripple-color="dark">もっと読む…</a>
                 </div>
             </div>
             <div class="card-footer text-center mt-1">
