@@ -1,24 +1,25 @@
 {% extends 'myapp/base.html' %}
+{% block header %}
+<!-- Background video -->
+<div class="text-center position-relative">
+    <video class="video-fluid z-depth-1 " autoplay loop muted width="100%" height="auto">
+        <source src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/video/Dictionary+-+21941.mp4" type="video/mp4" />
+    </video>
+    <div class="row-12">
+        <div class="position-absolute top-50 start-50 translate-middle text-white col-md-2">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {% for field in form %}
+                {{field.label }}
+                {{ field }}
+                {{ field.errors }}
+                {% endfor %}
+                <button type="submit" class="btn btn-primary mt-3 fs-5 fw-light" style="background-color: #ffffff5c;" data-mdb-ripple-color="white">Login</button>
+            </form>
 
-{% block content %}
-<div class="row">
-    <div class="col-md-3">
-        <br>
-        <h2>Login</h2>
-        <br>
-
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{ form.non_field_errors }}
-            {% for field in form %}
-            {{field.label }}
-            {{ field }}
-            {{ field.errors }}
-            <br>
-            {% endfor %}
-            <br>
-            <button type="submit" class="btn btn-primary" style="background-color: #4f4f4f;" data-mdb-ripple-color="white">Login</button>
-        </form>
+        </div>
     </div>
 </div>
+<!--/video-area-->
 {% endblock %}

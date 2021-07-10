@@ -35,6 +35,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <!--==============video レイアウトを制御する独自のCSSを読み込み===============-->
+    <link rel="stylesheet" href="../../../static/base.css">
     <!-- web_font_↓ -->
     <script>
         (function (d) {
@@ -140,10 +142,11 @@
                 </div>
             </div>
         </nav>
+        <!-- Navbar -->
     </header>
-    <!-- Navbar -->
+    {% block header %}
+    {% endblock %}
 
-    <!-- Background image -->
     <main class="container">
         {% if messages %}
         {% for message in messages %}

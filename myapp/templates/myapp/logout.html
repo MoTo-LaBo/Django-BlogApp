@@ -1,11 +1,16 @@
 {% extends 'myapp/base.html' %}
-
-{% block content %}
-<div class="card bg-dark text-white">
-    <img src="https://mdbootstrap.com/img/new/slides/017.jpg" class="card-img" alt="..." />
-    <div class="card-img-overlay">
-        <h5 class="card-title">Logout</h5>
-        <p class="card-text">ログアウトしました</p>
+{% block header %}
+<!-- Background video -->
+<div class="text-center position-relative">
+    <video class="video-fluid z-depth-1 " autoplay loop muted width="100%" height="auto">
+        <source src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/video/Wheat+-+62390.mp4" type="video/mp4" />
+    </video>
+    <div class="align-items-center position-absolute top-50 start-50 translate-middle">
+        <div class="text-white">
+            <h1 class="mb-3 fw-light">Logout</h1>
+            <p class="mb-3 fw-light">ログアウトしました</p>
+        </div>
     </div>
 </div>
+<!--/video-area-->
 {% endblock %}
