@@ -17,7 +17,7 @@
                 <hr>
                 {% for post in category.post_set.all|slice:":5" %}
                 <ul class="list-group">
-                    <li class="list-group-item btn btn-light mb-2" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' post.id %}" class="text-dark">{{ post.title }}</a></li>
+                    <li class="list-group-item btn btn-light mb-2 d-inline p-0" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' post.id %}" class="text-dark d-block p-2">{{ post.title }}</a></li>
                 </ul>
                 {% endfor %}
                 <a href="{% url 'myapp:category_detail' category.name_en %}" class="btn btn-primary" style="background-color: #33333374;" data-mdb-ripple-color="white">記事を全て見る</a>
