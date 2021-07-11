@@ -1,4 +1,4 @@
-#!/Users/moto/Dropbox/udemy/Django_web_App/venv/bin/python3
+#!/Users/moto/Dropbox/m_blog_app/venv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'static3==0.7.0','console_scripts','static'
 import re
 import sys

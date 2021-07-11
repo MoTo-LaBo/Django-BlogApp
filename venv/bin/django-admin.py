@@ -1,4 +1,4 @@
-#!/Users/moto/Dropbox/udemy/Django_web_App/venv/bin/python3
+#!/Users/moto/Dropbox/m_blog_app/venv/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

@@ -1,4 +1,4 @@
-#!/Users/moto/Dropbox/udemy/Django_web_App/venv/bin/python
+#!/Users/moto/Dropbox/m_blog_app/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
