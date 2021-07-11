@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ja">
 
 <head>
@@ -36,7 +37,7 @@
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
     <!--==============video レイアウトを制御する独自のCSSを読み込み===============-->
-    <link rel="stylesheet" href="../../../static/base.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/index.css' %}">
     <!-- web_font_↓ -->
     <script>
         (function (d) {
