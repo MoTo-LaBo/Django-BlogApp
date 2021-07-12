@@ -58,7 +58,7 @@
 
 /*========= navbar title レスポンシブのためCSS ===============*/
 .navbar-brand {
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     font-size: 2rem;
     font-weight: 100;
 }
@@ -72,7 +72,7 @@
 
 /* search font color */
 #search_font {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.5);
     font-weight: 100;
 }
 
@@ -193,7 +193,7 @@
     }
 
     .navbar-brand {
-        letter-spacing: 4px;
+        letter-spacing: 2px;
         font-size: 1.5rem;
         font-weight: 100;
     }
