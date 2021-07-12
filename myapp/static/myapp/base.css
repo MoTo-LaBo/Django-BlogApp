@@ -82,7 +82,7 @@
 
 .display-1 {
     font-weight: 100 !important;
-    letter-spacing: 20px;
+    letter-spacing: 40px;
 }
 
 @media (min-width: 1600px) {
@@ -93,6 +93,7 @@
 
 @media (max-width: 450px) {
     .display-1 {
-        padding-left: 19px;
+        padding-left: 21px;
+        letter-spacing: 17px;
     }
 }
