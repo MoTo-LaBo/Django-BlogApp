@@ -38,12 +38,13 @@
 }
 
 /*見出し設定*/
-h1 {
+.title {
     /*要素の配置*/
     position: absolute;
     /*要素を天地中央寄せ*/
     top: 50%;
     left: 50%;
+    text-align: center;
     transform: translateY(-50%) translateX(-50%);
     /*見た目の調整*/
     color: #fff;
@@ -53,5 +54,41 @@ h1 {
 /*========= レイアウトのためのCSS ===============*/
 .container {
     background: rgba(255, 255, 255, 0);
+}
 
+/*========= レスポンシブのためCSS ===============*/
+.navbar-brand {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.navbar-scrolled {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars {
+    color: #4f4f4f;
+}
+
+.dropdown-menu {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+}
+
+.display-1 {
+    font-weight: 100 !important;
+    letter-spacing: 30px;
+}
+
+@media (min-width: 1600px) {
+    .display-1 {
+        font-size: 5rem;
+    }
 }

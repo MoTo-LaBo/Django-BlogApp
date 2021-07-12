@@ -26,9 +26,16 @@
     </div>
 </div> -->
 <div id="header_video">
-    <h1>Title</h1>
+    <div class="title text-white">
+        <h1 class="display-1 mb-3 fw-light">{{ request.site.siteconfig.meta_title }}</h1>
+        <p class="mb-3 fs-2 fw-light">{{ request.site.siteconfig.top_title }}</p>
+        <p class="mb-3 fs-5 fw-light">{{ request.site.siteconfig.top_subtitle }}</p>
+    </div>
     <div id="video-area">
-        <video id="videos" poster="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/img/movie.jpg" webkit-playsinline playsinline muted autoplay loop>
+        <video id="videos" preload="auto" autoplay loop webkit-playsinline playsinline muted>
+            <source src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/video/Beach+-+50642.mp4" type="video/mp4" />
+            <source src="" type="video/ogv">
+            <source src="" type="video/webm">
             <!--
           poster：動画ファイルが利用できない環境で代替表示される画像
           webkit-playsinline：iOS 9までのSafari用インライン再生指定
@@ -38,9 +45,6 @@
           loop：動画をループさせる
           controls：コントロールバーを表示する
       -->
-            <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.mp4" type="video/mp4">
-            <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.ogv" type="video/ogv">
-            <source src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/video/movie.webm" type="video/webm">
             <p>動画を再生できる環境ではありません。</p>
         </video>
         <!--/video-area-->
@@ -73,7 +77,7 @@
                 <div class="d-flex justify-content-between">
                     <i class="far fa-thumbs-up mt-2">&nbsp;{{ item.like_count }}</i>
                     <p class="mb-0 mt-2">{{ item.category }}</p>
-                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-light" data-mdb-ripple-color="dark">もっと読む…</a>
+                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-primary text-white" style="background-color: #3333334f;" data-mdb-ripple-color="white">もっと読む…</a>
                 </div>
             </div>
             <div class="card-footer text-center mt-1">
@@ -81,7 +85,7 @@
             </div>
         </div>
         {% endfor %}
+        <a href="{% url 'myapp:post_list' %}" class="btn btn-primary mb-3 text-white col-6 mx-auto" style="background-color: #3333334f;" data-mdb-ripple-color="white">全ての記事を見る</a>
     </div>
-    <a href="{% url 'myapp:post_list' %}" class="btn btn-primary mt-3 text-white" style="background-color: #33333374;" data-mdb-ripple-color="white">全ての記事を見る</a>
 </main>
 {% endblock %}
