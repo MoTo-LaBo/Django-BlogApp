@@ -63,26 +63,51 @@
     font-weight: 100;
 }
 
-.navbar-scrolled .navbar-brand,
-.navbar-scrolled .nav-link,
-.navbar-scrolled .fa-bars {
-    color: #00000080;
+/* navbar top display color */
+#top_navbar {
+    background: rgba(0, 0, 0, 0.1);
 }
 
-/* menu bropdown display color */
+/* dropdown 後の font color は navbar-dark で切り替え */
+
+/* search font color */
+#search_font {
+    color: hsla(0, 0%, 100%, .75);
+    font-weight: 100;
+}
+
+/* navbar top menu fonts color */
+.nav-link {
+    border-radius: 4px;
+    font-weight: 200;
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* navbar menu bropdown display color */
 .dropdown-menu {
     background: rgba(0, 0, 0, 0.25);
 }
 
-/* menu bropdown fonts color */
+/* navbar menu bropdown fonts color */
 .dropdown-item {
     color: rgb(255, 255, 255);
     font-weight: 100;
 }
 
+.dropdown-item:hover {
+    color: #00000080;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* MoToLaBo titel */
 .display-1 {
     font-weight: 100 !important;
     letter-spacing: 40px;
+    padding-left: 25px;
 }
 
 @media (min-width: 1600px) {
@@ -95,5 +120,9 @@
     .display-1 {
         padding-left: 21px;
         letter-spacing: 17px;
+    }
+
+    .title {
+        top: 40%;
     }
 }
