@@ -51,12 +51,12 @@
     text-shadow: 0 0 15px #666;
 }
 
-/*========= レイアウトのためのCSS ===============*/
+/*========= 記事一覧 background color ===============*/
 .container {
     background: rgba(255, 255, 255, 0);
 }
 
-/*========= レスポンシブのためCSS ===============*/
+/*========= navbar title レスポンシブのためCSS ===============*/
 .navbar-brand {
     letter-spacing: 3px;
     font-size: 2rem;
@@ -72,7 +72,7 @@
 
 /* search font color */
 #search_font {
-    color: hsla(0, 0%, 100%, .75);
+    color: rgba(255, 255, 255, 0.3);
     font-weight: 100;
 }
 
@@ -123,6 +123,16 @@
     }
 
     .title {
-        top: 40%;
+        top: 45%;
+    }
+
+    .navbar {
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        letter-spacing: 4px;
+        font-size: 1.5rem;
+        font-weight: 100;
     }
 }
