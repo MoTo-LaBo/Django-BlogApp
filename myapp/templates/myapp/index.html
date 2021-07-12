@@ -1,6 +1,6 @@
 {% extends 'myapp/base.html' %}
 {% block header %}
-<!-- Background video -->
+<!-- Background video css file なしの場合 -->
 <!-- <div class="text-center position-relative">
     <video preload="auto" autoplay loop webkit-playsinline playsinline muted class="video-fluid z-depth-1" width="100%" height="auto">
         <source src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/video/Beach+-+50642.mp4" type="video/mp4" />
@@ -27,7 +27,7 @@
 </div> -->
 <div id="header_video">
     <div class="title text-white">
-        <h1 class="display-1 mb-3 fw-light">{{ request.site.siteconfig.meta_title }}</h1>
+        <h1 class="display-1 mb-3">{{ request.site.siteconfig.meta_title }}</h1>
         <p class="mb-3 fs-2 fw-light">{{ request.site.siteconfig.top_title }}</p>
         <p class="mb-3 fs-5 fw-light">{{ request.site.siteconfig.top_subtitle }}</p>
     </div>
@@ -77,7 +77,7 @@
                 <div class="d-flex justify-content-between">
                     <i class="far fa-thumbs-up mt-2">&nbsp;{{ item.like_count }}</i>
                     <p class="mb-0 mt-2">{{ item.category }}</p>
-                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-primary text-white" style="background-color: #3333334f;" data-mdb-ripple-color="white">もっと読む…</a>
+                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-primary text-white" style="background-color: rgba(0, 0, 0, 0.25);" data-mdb-ripple-color="white">もっと読む…</a>
                 </div>
             </div>
             <div class="card-footer text-center mt-1">
@@ -85,7 +85,7 @@
             </div>
         </div>
         {% endfor %}
-        <a href="{% url 'myapp:post_list' %}" class="btn btn-primary mb-3 text-white col-6 mx-auto" style="background-color: #3333334f;" data-mdb-ripple-color="white">全ての記事を見る</a>
     </div>
+    <a href="{% url 'myapp:post_list' %}" class="btn btn-primary mb-3 text-white d-grid gap-1 col-4 mx-auto" style="background-color:rgba(0, 0, 0, 0.25);" data-mdb-ripple-color="white">全ての記事</a>
 </main>
 {% endblock %}

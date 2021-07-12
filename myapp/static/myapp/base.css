@@ -63,20 +63,18 @@
     font-weight: 100;
 }
 
-.navbar-scrolled {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
-}
-
 .navbar-scrolled .navbar-brand,
 .navbar-scrolled .nav-link,
 .navbar-scrolled .fa-bars {
-    color: #4f4f4f;
+    color: #00000080;
 }
 
+/* menu bropdown display color */
 .dropdown-menu {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.25);
 }
 
+/* menu bropdown fonts color */
 .dropdown-item {
     color: rgb(255, 255, 255);
     font-weight: 100;
@@ -84,11 +82,17 @@
 
 .display-1 {
     font-weight: 100 !important;
-    letter-spacing: 30px;
+    letter-spacing: 40px;
 }
 
 @media (min-width: 1600px) {
     .display-1 {
         font-size: 5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .display-1 {
+        padding-left: 40px;
     }
 }
