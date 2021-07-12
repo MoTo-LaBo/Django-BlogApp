@@ -120,6 +120,14 @@
     letter-spacing: 10px;
 }
 
+#more_btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#post_list-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 @media (min-width: 1550px) {
     .display-1 {
         font-size: 5rem;
@@ -165,6 +173,14 @@
         font-size: 1rem;
         letter-spacing: 0px;
     }
+
+    .navbar-brand {
+        letter-spacing: 3px;
+    }
+
+    .navbar {
+        padding: 3px 0px;
+    }
 }
 
 @media (max-width: 749px) {
@@ -189,7 +205,7 @@
     }
 
     .navbar {
-        padding: 0px;
+        padding: 5px 0px;
     }
 
     .navbar-brand {
