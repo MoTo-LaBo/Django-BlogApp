@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/*========= 背景動画設定のCSS ===============*/
+/*========= index.html 背景動画設定のCSS ===============*/
 
 /*header設定*/
 #header_video {
@@ -51,9 +51,104 @@
     text-shadow: 0 0 15px #666;
 }
 
-/*========= 記事一覧 background color ===============*/
+/*========= category_list.html 背景image設定のCSS ===============*/
+
+/* Category image設定 */
+#header_image {
+    position: relative;
+    /*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;
+    /*高さを全画面にあわせる*/
+}
+
+#image_area {
+    position: fixed;
+    z-index: -1;
+    /*最背面に設定*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#images {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh;
+    /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw;
+    /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/*見出し設定*/
+.image_title {
+    /*要素を天地中央寄せ*/
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+.display-4 {
+    font-weight: 100 !important;
+    letter-spacing: 10px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 25px rgb(0, 0, 0);
+}
+
+/*========= index記事一覧 background color ===============*/
 .container {
     background: rgba(255, 255, 255, 0);
+}
+
+/*========= category記事一覧 background color ===============*/
+.body_color {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.cat_list {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cat_num {
+    color: rgb(255, 255, 255);
+}
+
+.cat_list:hover {
+    color: rgb(255, 255, 255);
+}
+
+.cat_btn {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cat_btn:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cat_list-title {
+    color: rgb(255, 255, 255);
+}
+
+.cat_list-title:hover {
+    color: rgb(255, 255, 255);
+}
+
+.more_look {
+    background: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+}
+
+.more_look:hover {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
 }
 
 /*========= navbar title レスポンシブのためCSS ===============*/
@@ -76,30 +171,39 @@
     font-weight: 100;
 }
 
+
+.search_btn {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.search_btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
 /* navbar top menu fonts color */
 .nav-link {
     border-radius: 4px;
-    font-weight: 200;
+    font-weight: 100;
 }
 
 .nav-link:hover {
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* navbar menu bropdown display color */
 .dropdown-menu {
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 /* navbar menu bropdown fonts color */
 .dropdown-item {
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 100;
 }
 
 .dropdown-item:hover {
-    color: #00000080;
+    color: rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -120,25 +224,25 @@
     letter-spacing: 10px;
 }
 
-/* もっと読む…　全て見る button */
+/* indexもっと読む…　全て見る button */
 #more_btn {
-    color: rgba(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #more_btn:hover {
-    color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(255, 255, 255, 0.25);
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 #post_list-btn {
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #post_list-btn:hover {
-    color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(255, 255, 255, 0.25);
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* footer */
@@ -149,7 +253,7 @@
 
 .sns_link:hover {
     color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .icon {
@@ -166,7 +270,7 @@
 
 .copyright:hover {
     color: rgba(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     padding: 3px;
 }
@@ -226,6 +330,76 @@
     }
 }
 
+/* タブレット, スマホ用 font, btn, color */
+@media (max-width: 1024px) {
+
+    /* indexもっと読む…　全て見る button */
+    #more_btn {
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    #post_list-btn {
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    /* navbar top menu fonts color */
+    .nav-link {
+        color: rgb(255, 255, 255);
+    }
+
+    /* navbar top menu fonts color */
+    .nav-link {
+        color: rgb(255, 255, 255);
+    }
+
+    /* navbar menu bropdown fonts color */
+    .dropdown-item {
+        color: rgb(255, 255, 255);
+    }
+
+    /*========= category記事一覧 background color ===============*/
+    .body_color {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .cat_list {
+        color: rgb(255, 255, 255);
+    }
+
+    .cat_num {
+        color: rgb(255, 255, 255);
+    }
+
+    .cat_btn {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .cat_list-title {
+        color: rgb(255, 255, 255);
+    }
+
+    .more_look {
+        background: rgba(255, 255, 255, 0.3);
+        color: rgb(255, 255, 255);
+    }
+
+    /* footer */
+    .icon {
+        color: rgb(255, 255, 255);
+    }
+
+    .copyright {
+        color: rgb(255, 255, 255);
+    }
+
+    .display-4 {
+        letter-spacing: 9px;
+    }
+
+}
+
 @media (max-width: 749px) {
     .display-1 {
         font-size: 2rem;
@@ -243,6 +417,10 @@
         font-size: 0.8rem;
     }
 
+    .display-4 {
+        letter-spacing: 6px;
+    }
+
     .title {
         top: 40%;
     }
@@ -257,11 +435,4 @@
         font-weight: 100;
     }
 
-    #more_btn {
-        background-color: rgba(0, 0, 0, 0.25);
-    }
-
-    #post_list-btn {
-        background-color: rgba(0, 0, 0, 0.25);
-    }
 }

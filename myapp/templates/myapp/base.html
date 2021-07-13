@@ -42,7 +42,7 @@
     <script>
         (function (d) {
             var config = {
-                    kitId: 'qiz2eoo',
+                    kitId: 'dhe5bhx',
                     scriptTimeout: 3000,
                     async: true
                 },
@@ -92,7 +92,7 @@
                             <!-- Dropdown menu -->
                             <ul class="dropdown-menu" aria-labelledby="account">
                                 {% if request.user.is_authenticated %}
-                                <li><a class="dropdown-item" href="">{{ request.user }}</a> </li>
+                                <li><a class="dropdown-item" href="">{{ request.user }}</a></li>
                                 <li><a class="dropdown-item" href="{% url 'myapp:logout' %}">ログアウト</a></li>
                                 {% else %}
                                 <li><a class="dropdown-item" href="{% url 'myapp:login' %}">ログイン</a></li>
@@ -135,10 +135,10 @@
                     <form action="{% url 'myapp:search' %}" class="d-flex input-group w-auto" method="POST">
                         {% csrf_token %}
                         <div class="form-outline">
-                            <input type="search" id="form1" class="form-dark form-control" aria-label="Search" name="freeword" />
+                            <input type="search" id="form1" class="form-control" aria-label="Search" name="freeword" />
                             <label id="search_font" class="form-label" for="form1">Search</label>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="background-color: #4f4f4f80;" data-mdb-ripple-color="white">
+                        <button type="submit" class="search_btn btn btn-primary" data-mdb-ripple-color="white">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>

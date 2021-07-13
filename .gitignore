@@ -4,7 +4,9 @@ local_settings.py
 db.sqlite3
 *.py[co]
 .DS_Store
+media
 video
 seo_ogp
 favicon
 images
+image
