@@ -78,7 +78,7 @@
                 <div class="d-flex justify-content-between">
                     <i class="far fa-thumbs-up mt-2">&nbsp;{{ item.like_count }}</i>
                     <p class="mb-0 mt-2">{{ item.category }}</p>
-                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn text-white" id="more_btn" style="background-color: rgba(0, 0, 0, 0.25);">もっと読む…</a>
+                    <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-black-50 hover-overlay ripple" id="more_btn">もっと読む…</a>
                 </div>
             </div>
             <div class="card-footer text-center mt-1">
@@ -87,6 +87,8 @@
         </div>
         {% endfor %}
     </div>
-    <a href="{% url 'myapp:post_list' %}" class="btn mb-3 text-white d-grid gap-1 col-4 mx-auto p-2" id="post_list-btn" style="background-color: rgba(0, 0, 0, 0.25);">全ての記事</a>
+    <br>
+    <a href="{% url 'myapp:post_list' %}" class="btn btn-black-50 mb-3 d-grid gap-1 col-4 mx-auto p-2 hover-overlay ripple" id="post_list-btn">全ての記事</a>
+    <br>
 </main>
 {% endblock %}

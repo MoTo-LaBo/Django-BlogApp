@@ -120,12 +120,55 @@
     letter-spacing: 10px;
 }
 
+/* もっと読む…　全て見る button */
+#more_btn {
+    color: rgba(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 #more_btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+#post_list-btn {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 #post_list-btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* footer */
+.sns_link {
+    text-decoration: none;
+    margin: 10px 25px 5px 25px;
+}
+
+.sns_link:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.icon:hover {
+    color: rgba(255, 255, 255);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.copyright:hover {
+    color: rgba(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 3px;
 }
 
 @media (min-width: 1550px) {
@@ -212,5 +255,13 @@
         letter-spacing: 2px;
         font-size: 1.5rem;
         font-weight: 100;
+    }
+
+    #more_btn {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    #post_list-btn {
+        background-color: rgba(0, 0, 0, 0.25);
     }
 }
