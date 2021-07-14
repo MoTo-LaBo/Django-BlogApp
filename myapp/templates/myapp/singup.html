@@ -1,24 +1,28 @@
 {% extends 'myapp/base.html' %}
-
-{% block content %}
-<div class="row">
-    <div class="col-md-3">
-        <br>
-        <h2>Singup</h2>
-        <br>
-
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{ form.non_field_errors }}
-            {% for field in form %}
-            {{field.label }}
-            {{ field }}
-            {{ field.errors }}
-            <br>
-            {% endfor %}
-            <br>
-            <button type="submit" class="btn btn-primary" style="background-color: #4f4f4f;" data-mdb-ripple-color="white">Singup</button>
-        </form>
+{% block header %}
+<div id="header_images">
+    <div id="image_area">
+        <img id="images" src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/image/handwriting.jpg" alt="handwriting">
+        <!-- <img id="images" src="../../../media/image/handwriting.jpg" alt="books"> -->
+    </div>
+    <!--/image-area-->
+    {% endblock %}
+    {% block content %}
+    <div class="login_height row">
+        <div class="login_box col-md-3">
+            <h1 class="display-5 mb-3 text-center">Singup</h1>
+            <form class="login_form form-white mask-custom shadow-0" action="" method="POST">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                {% for field in form %}
+                {{field.label }}
+                {{ field }}
+                {{ field.errors }}
+                <br class="p-1">
+                {% endfor %}
+                <button type="submit" class="btn btn-lg btn-black-50 hover-overlay ripple" id="more_btn">ログイン</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

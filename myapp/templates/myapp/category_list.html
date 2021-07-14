@@ -5,36 +5,29 @@
         <img id="images" src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/image/books.jpg" alt="books">
         <!-- <img id="images" src="../../../media/image/books.jpg" alt="books"> -->
     </div>
-</div>
-<!--/image-area-->
-{% endblock %}
-{% block content %}
-<div class="image_title text-white">
-    <h1 class="display-4 mt-5 mb-5">Category List</h1>
-</div>
-<!-- <div class="row">
-    <div class="col-md-9">
-        <br>
-        <h2 class="fw-light">Category List</h2>
-        <br>
-    </div>
-</div> -->
-<div class="row">
-    {% for category in category_list %}
-    <div class="col-md-4 mb-4">
-        <div class="body_color card">
-            <div class="card-body">
-                <h4 class="card-title"><a href="{% url 'myapp:category_detail' category.name_en %}" class="cat_list fw-light">{{ category.name }}</a>&nbsp;<small class="cat_num fw-light">[&nbsp;{{ category.post_count }}&nbsp;]</small></h4>
-                <hr class="text-white">
-                {% for post in category.post_set.all|slice:":5" %}
-                <ul class="list-group">
-                    <li class="cat_btn list-group-item btn mb-2 d-inline p-0" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' post.id %}" class="cat_list-title d-block p-2 fw-light">{{ post.title }}</a></li>
-                </ul>
-                {% endfor %}
-                <a href="{% url 'myapp:category_detail' category.name_en %}" class="more_look btn btn-black-50 fw-light" data-mdb-ripple-color="white">記事を全て見る</a>
+    <!--/image-area-->
+    {% endblock %}
+    {% block content %}
+    <div class="row min-vh-100">
+        <div class="image_title text-white">
+            <h1 class="display-4 mt-5 mb-5">Category List</h1>
+        </div>
+        {% for category in category_list %}
+        <div class="col-md-4 mb-5">
+            <div class="body_color card">
+                <div class="card-body">
+                    <h4 class="card-title"><a href="{% url 'myapp:category_detail' category.name_en %}" class="cat_list fw-light">{{ category.name }}</a>&nbsp;<small class="cat_num fw-light">[&nbsp;{{ category.post_count }}&nbsp;]</small></h4>
+                    <hr class="text-white">
+                    {% for post in category.post_set.all|slice:":5" %}
+                    <ul class="list-group">
+                        <li class="cat_btn list-group-item btn mb-2 d-inline p-0" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' post.id %}" class="cat_list-title d-block p-2 fw-light">{{ post.title }}</a></li>
+                    </ul>
+                    {% endfor %}
+                    <a href="{% url 'myapp:category_detail' category.name_en %}" class="more_look btn btn-black-50 fw-light" data-mdb-ripple-color="white">記事を全て見る</a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}

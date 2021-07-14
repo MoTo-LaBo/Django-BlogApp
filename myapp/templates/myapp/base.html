@@ -134,9 +134,9 @@
                     </ul>
                     <form action="{% url 'myapp:search' %}" class="d-flex input-group w-auto" method="POST">
                         {% csrf_token %}
-                        <div class="form-outline">
-                            <input type="search" id="form1" class="form-control" aria-label="Search" name="freeword" />
-                            <label id="search_font" class="form-label" for="form1">Search</label>
+                        <div class="form-outline form-white">
+                            <input type="search" id="formWhite" class="form-control" aria-label="Search" name="freeword" />
+                            <label id="search_font" class="form-label" for="formWhite">Search</label>
                         </div>
                         <button type="submit" class="search_btn btn btn-primary" data-mdb-ripple-color="white">
                             <i class="fas fa-search"></i>

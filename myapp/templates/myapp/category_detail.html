@@ -1,17 +1,24 @@
 {% extends 'myapp/base.html' %}
-
-{% block content %}
-<div class="row">
-    <div class="col-md-9">
-        <br>
-        <h2>{{ object.name }}</h2>
-        <hr>
-        <ul class="list-group">
-            {% for item in category_posts %}
-            <li class="list-group-item btn btn-light mb-2 d-inline p-0" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' item.pk %}" class="text-dark d-block p-2">{{ item.title }}</a></li>
-            {% endfor %}
-        </ul>
-        <br>
+{% block header %}
+<div id="header_images">
+    <div id="image_area">
+        <img id="images" src="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/image/reading.jpg" alt="reading">
+        <!-- <img id="images" src="../../../media/image/reading.jpg" alt="reading"> -->
+    </div>
+    {% endblock %}
+    {% block content %}
+    <div class="login_height row">
+        <div class="col-md-12">
+            <br>
+            <h2 class="text-white text-center mt-4">{{ object.name }}</h2>
+            <hr class="text-white">
+            <ul class="list-group">
+                {% for item in category_posts %}
+                <li class="cat_btn list-group-item btn mb-3 d-inline p-0" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' item.pk %}" class="cat_list-title d-block p-2 fw-light">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+            <br>
+        </div>
     </div>
 </div>
 {% endblock %}

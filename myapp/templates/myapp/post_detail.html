@@ -1,10 +1,9 @@
 {% extends 'myapp/base.html' %}
 
 {% block content %}
-<div class="row">
+<div class="row mb-4 mt-5 min-vh-100">
     <div class="col-md-9">
-        <br>
-        <div class="card">
+        <div class="card mb-4">
             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 {% if object.thumbnail %}
                 <img src="{{ object.thumbnail.url }}" class="img-fluid" alt="{{ object.title }}" />
@@ -32,24 +31,20 @@
                     <small class="text-muted ms-3 fs-6 fw-light">by&nbsp;{{ object.author }}&nbsp;at {{ object.created_at.date }}</small>
                 </div>
             </div>
-
         </div>
-        <br>
     </div>
     <div class="col-md-3">
-        <br>
         <div class="card">
-            <div class="card-body">
+            <div class="card-body pt-0 pb-0">
                 <h5 class="card-title">{{ object.category }}</h5>
-                <p>このカテゴリの他の記事</p>
+                <p>その他の記事</p>
             </div>
             <ul class="list-group">
                 {% for item in category_posts %}
-                <li class="list-group-item btn btn-light mb-1 d-inline p-0" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' item.id %}" class="text-dark d-block p-2">{{ item.title }}</a></li>
+                <li class="list-group-item btn btn-light mb-2 d-inline p-0" data-mdb-ripple-color="dark"><a href="{% url 'myapp:post_detail' item.id %}" class="text-dark d-block p-2">{{ item.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
-
     </div>
 </div>
 {% endblock %}

@@ -54,11 +54,11 @@
 <!--/video-area-->
 {% endblock %}
 {% block content %}
-<main class="container mt-3 text-white">
+<main class="container p-0 mt-3 text-white">
     <!-- Background image -->
     <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for item in post_list %}
-        <div class="col mt-5">
+        <div class="col mt-5 p-3">
             <div class="card bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                 {% if item.thumbnail %}
                 <img src="{{ item.thumbnail.url }}" class="img-fluid" alt="{{ item.title }}" />
@@ -69,20 +69,21 @@
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
             </div>
-            <div class="card-body">
-                <h4 class="card-title fw-light">{{ item.title }}</h4>
-                <hr>
+            <div class="card-body p-0">
+                <h4 class="card-title mt-3 mb-0 fw-light">{{ item.title }}</h4>
+                <hr class="mt-1">
                 <p class="card-text">
                     {{ item.content | safe | truncatechars_html:130 }}
                 </p>
                 <div class="d-flex justify-content-between">
                     <i class="far fa-thumbs-up mt-2">&nbsp;{{ item.like_count }}</i>
-                    <p class="mb-0 mt-2">{{ item.category }}</p>
                     <a href="{% url 'myapp:post_detail' item.id %}" class="btn btn-black-50 hover-overlay ripple" id="more_btn">もっと読む…</a>
                 </div>
+                <p class="mb-0 mt-3 text-center">{{ item.category }}</p>
             </div>
-            <div class="card-footer text-center mt-1">
-                <small class=".text-muted ms-3 fs-6 fw-light">by&nbsp;{{ item.author }}&nbsp;at {{ item.created_at.date }}</small>
+            <hr class="mb-1">
+            <div class="text-center">
+                <small class=".text-muted ms-3 fs-6 fw-light">{{ item.author }}&nbsp;{{ item.created_at.date }}</small>
             </div>
         </div>
         {% endfor %}

@@ -101,57 +101,11 @@
     letter-spacing: 10px;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 25px rgb(0, 0, 0);
+    transform: translate(0%, 150%);
 }
 
-/*========= index記事一覧 background color ===============*/
-.container {
-    background: rgba(255, 255, 255, 0);
-}
-
-/*========= category記事一覧 background color ===============*/
-.body_color {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.cat_list {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.cat_num {
-    color: rgb(255, 255, 255);
-}
-
-.cat_list:hover {
-    color: rgb(255, 255, 255);
-}
-
-.cat_btn {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.cat_btn:hover {
-    background: rgba(0, 0, 0, 0.4);
-}
-
-.cat_list-title {
-    color: rgb(255, 255, 255);
-}
-
-.cat_list-title:hover {
-    color: rgb(255, 255, 255);
-}
-
-.more_look {
-    background: rgba(255, 255, 255, 0.3);
-    color: rgb(255, 255, 255);
-}
-
-.more_look:hover {
-    background: rgba(0, 0, 0, 0.4);
-    color: rgb(255, 255, 255);
-}
-
-/*========= navbar title レスポンシブのためCSS ===============*/
+/*=========  base.html CSS ===============*/
+/* navbar title */
 .navbar-brand {
     letter-spacing: 4px;
     font-size: 2rem;
@@ -162,8 +116,6 @@
 #top_navbar {
     background: rgba(0, 0, 0, 0.1);
 }
-
-/* dropdown 後の font color は navbar-dark で切り替え */
 
 /* search font color */
 #search_font {
@@ -223,26 +175,6 @@
     letter-spacing: 10px;
 }
 
-/* indexもっと読む…　全て見る button */
-#more_btn {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#more_btn:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-#post_list-btn {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#post_list-btn:hover {
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.3);
-}
 
 /* footer */
 .sns_link {
@@ -274,6 +206,139 @@
     padding: 3px;
 }
 
+/*========= index.html css ===============*/
+/* 記事一覧 background color */
+.container {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* indexもっと読む…　全て見る button */
+#more_btn {
+    color: rgba(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#more_btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#post_list-btn {
+    color: rgba(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#post_list-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*========= category_list.html ===============*/
+/* 記事一覧 background color */
+.body_color {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.cat_list {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cat_num {
+    color: rgb(255, 255, 255);
+}
+
+.cat_list:hover {
+    color: rgb(255, 255, 255);
+}
+
+.cat_btn {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cat_btn:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.cat_list-title {
+    color: rgb(255, 255, 255);
+}
+
+.cat_list-title:hover {
+    color: rgb(255, 255, 255);
+}
+
+.more_look {
+    background: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+}
+
+.more_look:hover {
+    background: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+}
+
+/*========= login.html ===============*/
+.login_height {
+    height: 87vh;
+}
+
+.login_box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login_form {
+    color: rgb(255, 255, 255);
+    font-weight: 100 !important;
+    text-align: center;
+}
+
+/* login box 装飾 */
+.form-control {
+    color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.form-control:focus {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.35);
+    outline: 0;
+    font-weight: 300 !important;
+    border-color: rgba(0, 0, 0, 0.20);
+    box-shadow: inset 0 0 0 1px #ffffff62;
+}
+
+.form-outline {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* sinup titel */
+.display-5 {
+    font-weight: 100 !important;
+    letter-spacing: 7px;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-shadow: 0 0 40px rgb(0, 0, 0);
+}
+
+/*========= post_form.html ===============*/
+
+/* post_form.html 保存 btn */
+#save_btn {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 40px;
+}
+
+#save_btn:hover {
+    color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*========= responsive @media ===============*/
 @media (min-width: 1550px) {
     .display-1 {
         font-size: 5rem;
@@ -320,6 +385,10 @@
         letter-spacing: 0px;
     }
 
+    .display-4 {
+        transform: translate(0%, 110%);
+    }
+
     .navbar-brand {
         letter-spacing: 3px;
     }
@@ -331,9 +400,34 @@
 
 /* タブレット, スマホ用 font, btn, color */
 @media (max-width: 1024px) {
-
     .display-4 {
-        letter-spacing: 9px;
+        letter-spacing: 7px;
+    }
+
+    /* navbar menu bropdown display color */
+    .dropdown-menu {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .dropdown-item {
+        color: rgba(255, 255, 255);
+    }
+
+    .cat_list {
+        color: rgba(255, 255, 255);
+    }
+
+    .icon {
+        color: rgba(255, 255, 255);
+    }
+
+    .copyright {
+        color: rgba(255, 255, 255);
+    }
+
+    /* login.html height */
+    .login_height {
+        height: 85vh;
     }
 }
 
@@ -355,7 +449,8 @@
     }
 
     .display-4 {
-        letter-spacing: 6px;
+        letter-spacing: 5px;
+        transform: translate(0%, 0%);
     }
 
     .title {
@@ -372,4 +467,8 @@
         font-weight: 100;
     }
 
+    /* login.html height */
+    .login_height {
+        height: 75vh;
+    }
 }
