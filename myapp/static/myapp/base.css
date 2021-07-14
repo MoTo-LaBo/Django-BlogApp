@@ -339,19 +339,29 @@
         background-color: rgba(0, 0, 0, 0.3);
     }
 
+    #more_btn:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
     #post_list-btn {
         color: rgb(255, 255, 255);
         background-color: rgba(0, 0, 0, 0.3);
     }
 
-    /* navbar top menu fonts color */
-    .nav-link {
+    #post_list-btn:hover {
         color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.3);
     }
 
     /* navbar top menu fonts color */
     .nav-link {
         color: rgb(255, 255, 255);
+    }
+
+    .nav-link:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     /* navbar menu bropdown fonts color */
@@ -372,6 +382,11 @@
         color: rgb(255, 255, 255);
     }
 
+    .dropdown-item:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
     .cat_btn {
         background: rgba(255, 255, 255, 0.3);
     }
@@ -386,12 +401,34 @@
     }
 
     /* footer */
+    .sns_link {
+        text-decoration: none;
+        margin: 10px 25px 5px 25px;
+    }
+
+
+    .sns_link:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
     .icon {
         color: rgb(255, 255, 255);
     }
 
+    .icon:hover {
+        color: rgba(255, 255, 255);
+    }
+
     .copyright {
         color: rgb(255, 255, 255);
+    }
+
+    .copyright:hover {
+        color: rgba(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 4px;
+        padding: 3px;
     }
 
     .display-4 {
