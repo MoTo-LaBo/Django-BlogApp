@@ -171,7 +171,6 @@
     font-weight: 100;
 }
 
-
 .search_btn {
     background: rgba(0, 0, 0, 0.3);
 }
@@ -332,6 +331,15 @@
 
 /* タブレット, スマホ用 font, btn, color */
 @media (max-width: 1024px) {
+
+    .search_btn {
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .search_btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
 
     /* indexもっと読む…　全て見る button */
     #more_btn {
