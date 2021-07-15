@@ -5,7 +5,7 @@
 3. Heroku, GitHub, AWS S3 を用いて、世界に公開
    - App 詳細は Development_Manual.md を確認
 4. iPhone,Android の home icon 対応
-   - SEO, OGP の対策も実施
+   - 簡易的な SEO, OGP の対策も実施
 
 ## 1. App の使用方法
 1. MoTo LaBo は私自身の紹介を含め、日々感じた事を綴っていく為に立ち上げた Blog site です
