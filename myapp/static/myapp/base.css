@@ -278,7 +278,7 @@
 
 /*========= login.html ===============*/
 .login_height {
-    height: 85vh;
+    height: 87vh;
 }
 
 .login_box {
@@ -327,7 +327,7 @@
 
 /* post_height */
 .post_height {
-    height: 85vh;
+    height: 87vh;
 }
 
 /* post_form.html 保存 btn */
@@ -340,6 +340,11 @@
 #save_btn:hover {
     color: rgba(0, 0, 0, 0.8);
     background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*========= post_list.html ===============*/
+.post_list-height {
+    height: 87vh;
 }
 
 
@@ -429,7 +434,6 @@
     .copyright {
         color: rgba(255, 255, 255);
     }
-
 }
 
 @media (min-width: 800px) and (max-width: 1024px) {
@@ -439,8 +443,13 @@
         height: 87vh;
     }
 
-    /* post_height */
+    /* post_form */
     .post_height {
+        height: 87vh;
+    }
+
+    /* post_list */
+    .post_list-height {
         height: 87vh;
     }
 }
@@ -453,6 +462,11 @@
     /* post_height */
     .post_height {
         height: 83vh;
+    }
+
+    /* post_list */
+    .post_list-height {
+        height: 100%;
     }
 }
 
@@ -497,8 +511,13 @@
         height: 73vh;
     }
 
-    /* post_height */
+    /* post_form */
     .post_height {
-        height: 100vh;
+        height: 100%;
+    }
+
+    /* post_list */
+    .post_list-height {
+        height: 100%;
     }
 }
