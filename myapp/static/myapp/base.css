@@ -325,6 +325,11 @@
 
 /*========= post_form.html ===============*/
 
+/* post_height */
+.post_height {
+    height: 85vh;
+}
+
 /* post_form.html 保存 btn */
 #save_btn {
     color: rgb(255, 255, 255);
@@ -433,10 +438,20 @@
     .login_height {
         height: 87vh;
     }
+
+    /* post_height */
+    .post_height {
+        height: 87vh;
+    }
 }
 
 @media (min-width:750px) and (max-width: 799px) {
     .login_height {
+        height: 83vh;
+    }
+
+    /* post_height */
+    .post_height {
         height: 83vh;
     }
 }
@@ -480,5 +495,10 @@
     /* login.html height */
     .login_height {
         height: 73vh;
+    }
+
+    /* post_height */
+    .post_height {
+        height: 100vh;
     }
 }
