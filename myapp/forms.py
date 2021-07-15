@@ -23,7 +23,7 @@ class LoginForm(AuthenticationForm):
             field.widget.attrs['class'] = 'form-control'
 
 
-class SingUpForm(UserCreationForm):
+class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2')

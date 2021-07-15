@@ -167,7 +167,7 @@
         <li><a class="dropdown-item" href="{% url 'myapp:logout' %}">ログアウト</a></li>
     {% else %}
         <li><a class="dropdown-item" href="{% url 'myapp:login' %}">ログイン</a></li>
-        <li><a class="dropdown-item" href="{% url 'myapp:singup' %}">ユーザー登録</a></li>
+        <li><a class="dropdown-item" href="{% url 'myapp:signup' %}">ユーザー登録</a></li>
     {% endif %}
 - request.user で login している user を取得する
   - .is_authenticated (login しているかしていないか)

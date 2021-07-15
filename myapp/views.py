@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView, CreateView, DetailView, UpdateView, DeleteView, ListView
 from .models import Post, Like, Category
 from django.urls import reverse_lazy
-from .forms import PostForm, LoginForm, SingUpForm, SearchForm
+from .forms import PostForm, LoginForm, SignUpForm, SearchForm
 from django.contrib import messages
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth import login
@@ -96,9 +96,9 @@ class Logout(LogoutView):
     template_name = 'myapp/logout.html'
 
 
-class SingUp(CreateView):
-    form_class = SingUpForm
-    template_name = 'myapp/singup.html'
+class SignUp(CreateView):
+    form_class = SignUpForm
+    template_name = 'myapp/signup.html'
     success_url = reverse_lazy('myapp:index')
 
     def form_valid(self, form):

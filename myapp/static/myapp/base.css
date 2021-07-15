@@ -278,12 +278,12 @@
 
 /*========= login.html ===============*/
 .login_height {
-    height: 87vh;
+    height: 85vh;
 }
 
 .login_box {
     position: absolute;
-    top: 45%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -425,9 +425,19 @@
         color: rgba(255, 255, 255);
     }
 
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+
     /* login.html height */
     .login_height {
-        height: 85vh;
+        height: 87vh;
+    }
+}
+
+@media (min-width:750px) and (max-width: 799px) {
+    .login_height {
+        height: 83vh;
     }
 }
 
@@ -469,6 +479,6 @@
 
     /* login.html height */
     .login_height {
-        height: 75vh;
+        height: 73vh;
     }
 }
