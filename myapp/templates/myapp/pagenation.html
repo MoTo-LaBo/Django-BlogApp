@@ -1,17 +1,17 @@
-<div class="pagination">
-    <span class="step-links">
+<div class="pagination d-flex justify-content-center">
+    <span class="step-links mb-5">
         {% if page_obj.has_previous %}
-        <a href="?page=1">&laquo; first</a>
-        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        <a href="?page=1" class="btn btn-light m-2 mb-0" data-mdb-ripple-color="dark">&laquo; first</a>
+        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-light m-2 mb-0" data-mdb-ripple-color="dark">previous</a>
         {% endif %}
 
         <span class="current">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            No.{{ page_obj.number }}.{{ page_obj.paginator.num_pages }}
         </span>
 
         {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">next</a>
-        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        <a href="?page={{ page_obj.next_page_number }}" class="btn btn-light m-2 mb-0" data-mdb-ripple-color="dark">next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-light m-2 mb-0" data-mdb-ripple-color="dark">last &raquo;</a>
         {% endif %}
     </span>
 </div>

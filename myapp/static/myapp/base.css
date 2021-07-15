@@ -323,6 +323,15 @@
     text-shadow: 0 0 40px rgb(0, 0, 0);
 }
 
+/* logout titel */
+.display-6 {
+    font-weight: 100 !important;
+    letter-spacing: 7px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    text-shadow: 0 0 25px rgb(0, 0, 0);
+}
+
 /*========= post_form.html ===============*/
 
 /* post_height */
@@ -347,6 +356,31 @@
     height: 87vh;
 }
 
+.post_link {
+    position: relative;
+    padding: 0px;
+}
+
+.post_link:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.post_link-1 {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    top: 30%;
+}
+
+.post_link-1:hover {
+    color: rgb(255, 255, 255);
+}
 
 /*========= responsive @media ===============*/
 @media (min-width: 1550px) {
@@ -434,6 +468,11 @@
     .copyright {
         color: rgba(255, 255, 255);
     }
+
+    .display-6 {
+        letter-spacing: 4px;
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 800px) and (max-width: 1024px) {
@@ -450,7 +489,7 @@
 
     /* post_list */
     .post_list-height {
-        height: 87vh;
+        height: 83vh;
     }
 }
 
@@ -466,7 +505,7 @@
 
     /* post_list */
     .post_list-height {
-        height: 100%;
+        height: 83vh;
     }
 }
 
@@ -490,6 +529,11 @@
     .display-4 {
         letter-spacing: 5px;
         transform: translate(0%, 0%);
+    }
+
+    .display-6 {
+        letter-spacing: 3px;
+        font-size: 0.9rem;
     }
 
     .title {
