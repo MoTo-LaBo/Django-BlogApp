@@ -4,39 +4,41 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width = device-width, initial-scale=1, user-scalable=yes" />
-    <meta name="description" content="MoTo LaBo 「基 実験室・研究室 」 「 think to build , build to think 」- つくるために考え・考えるためにつくる。　 プロトタイピングを大切に。頭だけではなく、まずカタチに落とし込んでみる。 体験・体感・違和感を大切に。" />
-    <meta property="og:url" content="http://www.mySite.com/" />
     <!-- 自分自身のHPのURL. -->
-    <meta property="og:title" content="MOTOYA ITO DESGIN" />
-    <meta property="og:site_name" content="website" />
+    <meta property="og:url" content="https://django-blog-app-moto-labo.herokuapp.com/" />
+    <meta property="og:description" content="MoTo LaBo 「基 実験室・研究室 」 「 think to build , build to think 」- つくるために考え・考えるためにつくる -　 プロトタイピングを大切に。頭だけではなく、まずカタチに落とし込んでみる。 体験・体感・違和感を大切に。" />
+    <meta property="og:title" content="MoTo LaBo" />
+    <meta property="og:site_name" content="MoTo LaBo" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja-JP" />
-    <meta property="og:image" content="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/seo_ogp/seo.png" />
     <!-- 1200px*630以上 -->
-    <meta property="og:description" content="MoTo LaBo 「基 実験室・研究室 」 「 think to build , build to think 」- つくるために考え・考えるためにつくる。　 プロトタイピングを大切に。頭だけではなく、まずカタチに落とし込んでみる。 体験・体感・違和感を大切に。" />
+    <meta property="og:image" content="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/moto_ogp.png" />
+    <!-- twitter -->
     <meta name="twitter:card" content="summary" />
+    <meta name="description" content="MoTo LaBo 「基 実験室・研究室 」 「 think to build , build to think 」- つくるために考え・考えるためにつくる -　 プロトタイピングを大切に。頭だけではなく、まずカタチに落とし込んでみる。 体験・体感・違和感を大切に。" />
+    <!-- favicon_image_icon_background-color -->
+    <meta name="msapplication-TileColor" content="#7b7b7b">
+    <meta name="theme-color" content="#7b7b7b">
     <!-- favicon_image_icon -->
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- favicon_image_icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/favicon/android-chrome-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/favicon-16x16.png" />
+    <link rel="android-chrome-192x192" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/android-chrome-192x192.png">
+    <link rel="android-chrome-512x512" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/android-chrome-512x512.png">
+    <link rel="manifest" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/safari-pinned-tab.svg" color="#515151">
+    <link rel="shortcut icon" href="https://django-blog-app-moto-labo.s3.ap-northeast-3.amazonaws.com/media/SEO/favicon_package_v0.16/favicon.ico">
     <!-- title -->
     <title>{{ request.site.siteconfig.meta_title }}</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
-    <!--==============video レイアウトを制御する独自のCSSを読み込み===============-->
+    <!--==============独自のCSSを読み込み===============-->
     <link rel="stylesheet" type="text/css" href="{% static 'myapp/base.css' %}">
     <!-- web_font_↓ -->
     <script>
