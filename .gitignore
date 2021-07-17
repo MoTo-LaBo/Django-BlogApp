@@ -3,6 +3,17 @@ staticfiles
 local_settings.py
 db.sqlite3
 *.py[co]
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
 .DS_Store
 media
 video_manual.txt
